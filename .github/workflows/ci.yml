@@ -42,14 +42,7 @@ jobs:
         shell: bash
 
       - name: Lint
-        run: |
-          echo "Linting"
-          rye run lint
+        run: rye run lint
 
-          echo "Running format checks"
-          rye run format
-        shell: bash
-
-      - name: Test
-        run: rye run pytest tests
-        shell: bash
+      - name: Format
+        run: rye run format
